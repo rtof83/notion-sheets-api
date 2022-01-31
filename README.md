@@ -9,6 +9,9 @@
 ### execução API
 - `npm run server`
 
+### arquivo de configuração
+- [config.js](https://github.com/rtof83/notion-sheets-api/blob/main/src/api/config.js)
+
 ### References:
 - [Henriquecesp/nextjs-notionPublic](https://github.com/Henriquecesp/nextjs-notion)
 - [Usando a API do Notion com NextJS - Criando um formulário de contato](https://www.youtube.com/watch?v=X9_YZ5jOlR0)
