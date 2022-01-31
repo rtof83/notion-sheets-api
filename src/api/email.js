@@ -14,7 +14,7 @@ const sendEmail = (produtos) => {
   const mailOptions = {
     from: account,
     to: account,
-    subject: 'Atenção! Verificar o estoque dos produtos abaixo',
+    subject: 'Atenção! Verifique o estoque dos produtos abaixo',
     text: produtos
   };
 

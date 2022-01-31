@@ -1,14 +1,12 @@
-// import axios from 'axios'
 const axios = require('axios')
+const { SHEETS_API } = require('./config')
 
 const sheetsAPI = async (id, produtos, endereco) => {
-    await axios.post(
-        process.env.SHEETS_API, {
+    await axios.post(SHEETS_API, {
             id: id,
             produtos: produtos,
             endereco: endereco,
             data: Date().toString()});
 }
 
-// export default sheetsAPI
 module.exports = sheetsAPI

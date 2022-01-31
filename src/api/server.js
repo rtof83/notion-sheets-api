@@ -5,14 +5,6 @@ const sheetsAPI = require('./sheets')
 const sendEmail = require('./email')
 const { PORT } = require('./config')
 
-// import dotenv from 'dotenv'
-// import express from 'express'
-// import cors from 'cors'
-// import sheetsAPI from './sheets.js'
-// import { createCompras, getCompras, getProdutos } from './notion.js'
-// import sendEmail from './email.js'
-// dotenv.config()
-
 const { createCompras,
         getCompras,
         getProdutos,
@@ -33,12 +25,10 @@ app.get('/produtos', async (req, res) => {
   res.send(produtos)
 })
 
-app.get('/sendemail/:produto', (req, res) => {
-  const produto = req.params.produto
-  console.log(produto)
-  res.send('produto enviado')
-  // const email = sendEmail()
-  // res.send(email)
+app.get('/sendemail/:produtos', (req, res) => {
+  const produtos = req.params.produtos
+  sendEmail(produtos)
+  res.send('email enviado')
 })
 
 app.post('/', async (req, res) => {
@@ -51,7 +41,7 @@ app.post('/', async (req, res) => {
   })
   
   // enviar requisição para google sheets
-  // await sheetsAPI(id, listaNomeProd.toString(), endereco)
+  await sheetsAPI(id, listaNomeProd.toString(), endereco)
   
   res.redirect('/')
 })
