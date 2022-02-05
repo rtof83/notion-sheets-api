@@ -38,6 +38,9 @@ function App() {
       .catch((e) => {
         return console.log('Something bad happened:', e.message);
       })
+
+      prodAlert();
+      getCompras();
     }
   }
 

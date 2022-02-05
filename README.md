@@ -7,7 +7,7 @@
 - `npm start`
 
 ### execução API
-- `npm run api`
+- `npm run server`
 
 ### arquivo de configuração
 - [config.js](https://github.com/rtof83/notion-sheets-api/blob/main/src/api/config.js)
